@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sporos Wealth Management - Schedule Your Private Consultation</title>
+    <meta name="description" content="Schedule a private consultation with Sporos Wealth Management. Located in Huntington Beach, serving high-net-worth clients throughout Orange County.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('yTq_0ZL0Nj4flf6bn');
+        console.log('EmailJS initialized with key: yTq_0ZL0Nj4flf6bn');
+        
+    </script>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="premium-nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <div class="brand-logo-image">
+                        <img src="images/sporos-logo.png" alt="Sporos Wealth Management Logo" class="logo-img">
+                    </div>
+                    <div class="brand-text-enhanced">
+                        <span class="brand-main-large">SPOROS WEALTH MANAGEMENT</span>
+                        <span class="brand-tagline">Elite Private Wealth Advisory</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link">About</a>
+                        <div class="dropdown-menu">
+                            <a href="about.html#philosophy" class="dropdown-link">Our Philosophy</a>
+                            <a href="about.html#team" class="dropdown-link">Leadership Team</a>
+                            <a href="about.html#values" class="dropdown-link">Core Values</a>
+                            <a href="about.html#awards" class="dropdown-link">Recognition</a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="services.html" class="nav-link">Services</a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-column">
+                                    <h4>Wealth Management</h4>
+                                    <a href="services.html#portfolio">Portfolio Management</a>
+                                    <a href="services.html#planning">Financial Planning</a>
+                                    <a href="services.html#retirement-planning">Retirement Planning</a>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Business Consulting</h4>
+                                    <a href="services.html#business-consulting">Growth Consulting</a>
+                                    <a href="services.html#turnaround">Business Turnaround</a>
+                                    <a href="services.html#valuation">Business Valuation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Specialized Services</h4>
+                                    <a href="services.html#estate">Estate Planning</a>
+                                    <a href="services.html#tax">Tax Strategy</a>
+                                    <a href="services.html#philanthropy">Philanthropy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="insights.html" class="nav-link">Insights</a>
+                        <div class="dropdown-menu">
+                            <a href="https://www.lpl.com/research.html" target="_blank" class="dropdown-link">Financial News</a>
+                            <a href="https://www.fivestarprofessional.com/awardwinners/OCWM" target="_blank" class="dropdown-link">Five Star Award Winners</a>
+                            <a href="https://www.lpl.com/research/weekly-market-commentary.html" target="_blank" class="dropdown-link">Weekly Market Commentary</a>
+                            <a href="https://www.lpl.com/research/market-signals-podcast.html" target="_blank" class="dropdown-link">Market Research</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="#" class="nav-button client-login">
+                        <i class="fas fa-user-circle"></i>
+                        Client Login
+                    </a>
+                    <a href="#consultation" class="nav-button cta-button">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2969" alt="Modern Office Space" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <span class="page-label" data-aos="fade-up">Get In Touch</span>
+                <h1 class="page-title" data-aos="fade-up" data-aos-delay="100">
+                    Begin Your Journey to<br>
+                    <span class="highlight">Financial Excellence</span>
+                </h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Schedule a complimentary consultation to discover how we can help you 
+                    achieve your wealth management goals
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="methods-grid">
+                <div class="method-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="method-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Schedule a Consultation</h3>
+                    <p>Book a private meeting with our wealth management team</p>
+                    <a href="#consultation" class="method-btn">
+                        Book Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="method-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us Directly</h3>
+                    <p>Speak with our team during business hours</p>
+                    <a href="tel:9497299994" class="method-btn">
+                        (949) 729-9994
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                
+                <div class="method-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Send a Message</h3>
+                    <p>Email us with your questions or to request information</p>
+                    <a href="mailto:nasar@sporoswealth.com" class="method-btn">
+                        Send Email
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Contact Section -->
+    <section class="main-contact" id="consultation">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section" data-aos="fade-right">
+                    <div class="form-header">
+                        <h2>Schedule Your Private Wealth Consultation</h2>
+                        <p>Take the first step toward financial freedom. Our team will contact you within 24 hours to schedule your complimentary, no-obligation consultation with our wealth management experts.</p>
+                        <div class="consultation-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personalized wealth strategy assessment</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Portfolio review and optimization recommendations</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Discussion of your financial goals and concerns</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- NEW COMPREHENSIVE CONTACT FORM -->
+                    <form class="premium-form" id="new-contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-firstname">First Name *</label>
+                                <input type="text" id="client-firstname" name="clientFirstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="client-lastname">Last Name *</label>
+                                <input type="text" id="client-lastname" name="clientLastname" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-email">Email Address *</label>
+                                <input type="email" id="client-email" name="clientEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="client-phone">Phone Number</label>
+                                <input type="tel" id="client-phone" name="clientPhone" placeholder="(___) ___-____" maxlength="14">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-assets">Investable Assets</label>
+                            <select id="client-assets" name="clientAssets">
+                                <option value="">Select a range</option>
+                                <option value="under-1m">Under $1 Million</option>
+                                <option value="1m-5m">$1M - $5M</option>
+                                <option value="5m-10m">$5M - $10M</option>
+                                <option value="10m-25m">$10M - $25M</option>
+                                <option value="over-25m">Over $25M</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-services">Services of Interest</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientServices" value="wealth-management">
+                                    <span class="checkmark"></span>
+                                    Wealth Management
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientServices" value="private-banking">
+                                    <span class="checkmark"></span>
+                                    Private Banking
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientServices" value="estate-planning">
+                                    <span class="checkmark"></span>
+                                    Estate Planning
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientServices" value="tax-advisory">
+                                    <span class="checkmark"></span>
+                                    Tax Advisory
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientServices" value="business-consulting">
+                                    <span class="checkmark"></span>
+                                    Business Consulting
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientServices" value="philanthropy">
+                                    <span class="checkmark"></span>
+                                    Philanthropic Planning
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-consultation-type">Consultation Type</label>
+                            <select id="client-consultation-type" name="clientConsultationType">
+                                <option value="">Select consultation type</option>
+                                <option value="in-person">In-Person Meeting (Huntington Beach Office)</option>
+                                <option value="virtual">Virtual Meeting (Zoom/Teams)</option>
+                                <option value="phone">Phone Consultation</option>
+                                <option value="no-preference">No Preference</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-preferred-time">Preferred Meeting Time</label>
+                            <select id="client-preferred-time" name="clientPreferredTime">
+                                <option value="">Select preferred time</option>
+                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                <option value="evening">Early Evening (5 PM - 7 PM)</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-preferred-days">Preferred Meeting Days</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientPreferredDays" value="monday">
+                                    <span class="checkmark"></span>
+                                    Monday
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientPreferredDays" value="tuesday">
+                                    <span class="checkmark"></span>
+                                    Tuesday
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientPreferredDays" value="wednesday">
+                                    <span class="checkmark"></span>
+                                    Wednesday
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientPreferredDays" value="thursday">
+                                    <span class="checkmark"></span>
+                                    Thursday
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="clientPreferredDays" value="friday">
+                                    <span class="checkmark"></span>
+                                    Friday
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="client-message">How can we help you?</label>
+                            <textarea id="client-message" name="clientMessage" rows="4" placeholder="Tell us about your financial goals, current situation, or any specific concerns you'd like to address..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label privacy-check">
+                                <input type="checkbox" name="clientPrivacy" required>
+                                <span class="checkmark"></span>
+                                I agree to be contacted by Sporos Wealth Management.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <span class="btn-text">Schedule My Private Consultation</span>
+                            <i class="fas fa-calendar-check"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="form-security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Your information is secure and confidential</span>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info-section" data-aos="fade-left">
+                    <div class="info-card">
+                        <h3>Office Information</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Address</h4>
+                                <p>17011 Beach Blvd, Suite 565<br>Huntington Beach, CA 92647</p>
+                                <a href="https://maps.google.com/?q=17011+Beach+Blvd+Suite+565+Huntington+Beach+CA+92647" target="_blank" class="info-link">
+                                    Get Directions <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p>(949) 729-9994</p>
+                                <p class="info-note">Mon - Fri, 9:00 AM - 5:00 PM PST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>nasar@sporoswealth.com</p>
+                                <p class="info-note">We respond within 4 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                                Saturday: By appointment<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="what-to-expect">
+                        <h3>What to Expect</h3>
+                        <div class="expectation-list">
+                            <div class="expectation-item">
+                                <span class="expectation-number">1</span>
+                                <div class="expectation-content">
+                                    <h4>Initial Consultation</h4>
+                                    <p>60-minute confidential meeting to understand your goals and current situation</p>
+                                </div>
+                            </div>
+                            <div class="expectation-item">
+                                <span class="expectation-number">2</span>
+                                <div class="expectation-content">
+                                    <h4>Custom Strategy</h4>
+                                    <p>Personalized wealth management strategy tailored to your unique needs</p>
+                                </div>
+                            </div>
+                            <div class="expectation-item">
+                                <span class="expectation-number">3</span>
+                                <div class="expectation-content">
+                                    <h4>Implementation</h4>
+                                    <p>Seamless execution of your financial plan with ongoing support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Office Location -->
+    <section class="office-location">
+        <div class="container">
+            <div class="location-content" data-aos="fade-up">
+                <div class="location-header">
+                    <h2>Visit Our Huntington Beach Office</h2>
+                    <p>Conveniently located in the heart of Orange County, our office is easily accessible from throughout Southern California.</p>
+                </div>
+                
+                <div class="location-grid">
+                    <div class="location-info">
+                        <div class="location-details">
+                            <h3>Prime Location</h3>
+                            <p>Our offices are situated in a prestigious business complex, offering easy access to clients from Newport Beach, Irvine, Costa Mesa, and surrounding areas.</p>
+                            
+                            <div class="location-features">
+                                <div class="feature">
+                                    <i class="fas fa-car"></i>
+                                    <span>Complimentary valet parking</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-wifi"></i>
+                                    <span>Private meeting rooms</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Refreshments available</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-universal-access"></i>
+                                    <span>ADA accessible</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="nearby-areas">
+                            <h4>Serving Clients Throughout Orange County</h4>
+                            <div class="areas-grid">
+                                <span>Huntington Beach</span>
+                                <span>Newport Beach</span>
+                                <span>Irvine</span>
+                                <span>Costa Mesa</span>
+                                <span>Laguna Beach</span>
+                                <span>Anaheim Hills</span>
+                                <span>Westminster</span>
+                                <span>Fountain Valley</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-map">
+                        <div class="map-placeholder">
+                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2974" alt="Office Building Location" class="map-image">
+                            <div class="map-overlay">
+                                <a href="https://maps.google.com/?q=17011+Beach+Blvd+Suite+565+Huntington+Beach+CA+92647" target="_blank" class="map-link">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    View on Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about working with Sporos Wealth Management</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>What should I bring to my initial consultation?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For your initial consultation, bring recent statements from your investment accounts, insurance policies, tax returns, and any estate planning documents. However, don't worry if you don't have everything - we can work with whatever information you have available.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Is there a fee for the initial consultation?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, the initial consultation is complimentary. This allows us to understand your needs and explain how we can help, while giving you the opportunity to evaluate our services without any financial commitment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>What is your minimum asset requirement?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we typically work with clients who have significant investable assets, we evaluate each situation individually. We believe in building long-term relationships and are happy to discuss how we can help regardless of your current asset level.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>How do you charge for your services?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use a transparent, fee-based structure aligned with your success. Our fees are based on a percentage of assets under management, with no hidden costs or commissions. We'll discuss our fee structure in detail during your consultation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h3>Do you offer virtual meetings?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer secure video conferencing for clients who prefer virtual meetings or are located outside our immediate area. However, we find that in-person meetings, especially initially, help us build stronger relationships with our clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <div class="newsletter-content" data-aos="zoom-in">
+                <div class="newsletter-text">
+                    <h2>Stay Informed</h2>
+                    <p>Receive our quarterly market insights and wealth management updates</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            Subscribe
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <p class="newsletter-privacy">
+                        <i class="fas fa-lock"></i>
+                        Your email is secure. Unsubscribe anytime.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo-enhanced">
+                            <img src="images/sporos-logo.png" alt="Sporos Wealth Management Logo" class="footer-logo-img">
+                            <div class="footer-brand-text">
+                                <span class="footer-brand-main">SPOROS WEALTH MANAGEMENT</span>
+                                <span class="footer-brand-sub">Elite Private Wealth Advisory</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            Elite private wealth advisory services for discerning clients in Orange County and beyond.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html#team">Leadership</a></li>
+                            <li><a href="about.html#philosophy">Philosophy</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html#wealth-management">Wealth Management</a></li>
+                            <li><a href="services.html#business-consulting">Business Consulting</a></li>
+                            <li><a href="services.html#estate-planning">Estate Planning</a></li>
+                            <li><a href="services.html#tax-advisory">Tax Strategy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>17011 Beach Blvd, Suite 565<br>Huntington Beach, CA 92647</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(949) 729-9994</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nasar@sporoswealth.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-legal">
+                        <p>&copy; <span class="current-year">2024</span> Sporos Wealth Management. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="https://www.lpl.com/disclosures/privacy-security.html" target="_blank">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="https://www.lpl.com/disclosures.html" target="_blank">Disclosures</a>
+                            <a href="https://www.lpl.com/content/dam/lpl-www/documents/disclosures/lpl-financial-relationship-summary.pdf" target="_blank">LPL Financial Form CRS</a>
+                        </div>
+                    </div>
+                    <div class="footer-badges">
+                        <img src="https://www.finra.org/sites/default/files/finra-logo-white.png" alt="FINRA" style="height: 40px; width: auto; margin-right: 15px;">
+                        <img src="https://www.sipc.org/media/files/sipc-logo-white.png" alt="SIPC" style="height: 40px; width: auto; margin-right: 15px;">
+                        <img src="https://www.lpl.com/content/dam/lpl-www/documents/logos/lpl-financial-logo-white.png" alt="LPL Financial" style="height: 40px; width: auto;">
+                    </div>
+                </div>
+                
+                <div class="footer-disclosures">
+                    <p><strong>Important Disclosures:</strong> Securities and Advisory services offered through LPL Financial, a Registered Investment Advisor. Member FINRA & SIPC. LPL Financial representatives may discuss securities business only with residents of: AZ, CA, CO, NV, OK, OR, PA, TX, WA. <a href="https://brokercheck.finra.org/" target="_blank">Check advisor background on FINRA's BrokerCheck</a>.</p>
+                    
+                    <p>Content is developed from sources believed to be providing accurate information. Information is not intended as tax or legal advice. Please consult legal or tax professionals for specific information regarding your individual situation. We take protecting your data and privacy seriously. <a href="#" class="ccpa-link">Do not sell my personal information</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/new-contact.js"></script>
+</body>
+</html>

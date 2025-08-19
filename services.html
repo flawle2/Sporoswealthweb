@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Sporos Wealth Management - Private Banking & Investment Solutions</title>
+    <meta name="description" content="Comprehensive wealth management services including investment management, private banking, estate planning, and tax strategies for high-net-worth individuals.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <!-- Premium Navigation (Same as other pages) -->
+    <nav class="premium-nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <div class="brand-logo-image">
+                        <img src="images/sporos-logo.png" alt="Sporos Wealth Management Logo" class="logo-img">
+                    </div>
+                    <div class="brand-text-enhanced">
+                        <span class="brand-main-large">SPOROS WEALTH MANAGEMENT</span>
+                        <span class="brand-tagline">Elite Private Wealth Advisory</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link">About</a>
+                        <div class="dropdown-menu">
+                            <a href="about.html#philosophy" class="dropdown-link">Our Philosophy</a>
+                            <a href="about.html#team" class="dropdown-link">Leadership Team</a>
+                            <a href="about.html#values" class="dropdown-link">Core Values</a>
+                            <a href="about.html#awards" class="dropdown-link">Recognition</a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="services.html" class="nav-link active">Services</a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-column">
+                                    <h4>Wealth Management</h4>
+                                    <a href="#portfolio">Portfolio Management</a>
+                                    <a href="#planning">Financial Planning</a>
+                                    <a href="#retirement-planning">Retirement Planning</a>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Business Consulting</h4>
+                                    <a href="#business-consulting">Growth Consulting</a>
+                                    <a href="#turnaround">Business Turnaround</a>
+                                    <a href="#valuation">Business Valuation</a>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Specialized Services</h4>
+                                    <a href="#estate">Estate Planning</a>
+                                    <a href="#tax">Tax Strategy</a>
+                                    <a href="#philanthropy">Philanthropy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="insights.html" class="nav-link">Insights</a>
+                        <div class="dropdown-menu">
+                            <a href="https://www.lpl.com/research.html" target="_blank" class="dropdown-link">Financial News</a>
+                            <a href="https://www.fivestarprofessional.com/awardwinners/OCWM" target="_blank" class="dropdown-link">Five Star Award Winners</a>
+                            <a href="https://www.lpl.com/research/weekly-market-commentary.html" target="_blank" class="dropdown-link">Weekly Market Commentary</a>
+                            <a href="https://www.lpl.com/research/market-signals-podcast.html" target="_blank" class="dropdown-link">Market Research</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="#" class="nav-button client-login">
+                        <i class="fas fa-user-circle"></i>
+                        Client Login
+                    </a>
+                    <a href="contact.html#consultation" class="nav-button cta-button">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2970" alt="Modern Office Building" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <span class="page-label" data-aos="fade-up">Our Services</span>
+                <h1 class="page-title" data-aos="fade-up" data-aos-delay="100">
+                    Sophisticated Solutions<br>
+                    <span class="highlight">For Complex Wealth</span>
+                </h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Comprehensive wealth management services tailored to the unique needs of 
+                    high-net-worth individuals, families, and institutions
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Service Categories Navigation -->
+    <section class="service-nav">
+        <div class="container">
+            <div class="service-nav-wrapper" data-aos="fade-up">
+                <a href="#wealth-management" class="service-nav-item active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Wealth Management</span>
+                </a>
+                <a href="#business-consulting" class="service-nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Business Consulting</span>
+                </a>
+                <a href="#estate-planning" class="service-nav-item">
+                    <i class="fas fa-landmark"></i>
+                    <span>Estate Planning</span>
+                </a>
+                <a href="#retirement-planning" class="service-nav-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Retirement Planning</span>
+                </a>
+                <a href="#tax-advisory" class="service-nav-item">
+                    <i class="fas fa-calculator"></i>
+                    <span>Tax Advisory</span>
+                </a>
+                <a href="#philanthropy" class="service-nav-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Philanthropy</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wealth Management Section -->
+    <section class="service-section" id="wealth-management">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <span class="section-label">Premier Service</span>
+                <h2 class="section-title">Wealth Management</h2>
+                <p class="section-subtitle">
+                    Institutional-grade investment strategies with the personalized attention 
+                    your wealth deserves
+                </p>
+            </div>
+            
+            <div class="service-content-grid">
+                <div class="service-main" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?q=80&w=2970" alt="Financial Analysis" class="service-image">
+                    
+                    <div class="service-description">
+                        <h3>Comprehensive Portfolio Management</h3>
+                        <p>
+                            Our wealth management services go beyond traditional investment advice. 
+                            We employ sophisticated strategies typically reserved for institutional investors, 
+                            providing you with access to exclusive opportunities and advanced risk management techniques.
+                        </p>
+                        <p>
+                            Each portfolio is meticulously crafted to align with your unique objectives, 
+                            risk tolerance, and time horizon. We continuously monitor and rebalance your 
+                            investments to ensure optimal performance through all market conditions.
+                        </p>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h4>Our Investment Process</h4>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <span class="step-number">01</span>
+                                <div class="process-step-content">
+                                    <h5>Discovery & Analysis</h5>
+                                    <p>Comprehensive assessment of your financial situation and goals</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">02</span>
+                                <div class="process-step-content">
+                                    <h5>Strategy Development</h5>
+                                    <p>Custom investment strategy aligned with your objectives</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">03</span>
+                                <div class="process-step-content">
+                                    <h5>Implementation</h5>
+                                    <p>Careful execution with attention to tax efficiency and costs</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">04</span>
+                                <div class="process-step-content">
+                                    <h5>Ongoing Management</h5>
+                                    <p>Continuous monitoring, rebalancing, and optimization</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar" data-aos="fade-left">
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Custom Portfolio Construction</li>
+                            <li><i class="fas fa-check"></i> Alternative Investments Access</li>
+                            <li><i class="fas fa-check"></i> Direct Indexing Strategies</li>
+                            <li><i class="fas fa-check"></i> Tax-Loss Harvesting</li>
+                            <li><i class="fas fa-check"></i> Risk Management Overlays</li>
+                            <li><i class="fas fa-check"></i> ESG Investment Options</li>
+                            <li><i class="fas fa-check"></i> Private Market Opportunities</li>
+                            <li><i class="fas fa-check"></i> Currency Hedging Strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-stats">
+                        <div class="stat">
+                            <span class="stat-value">30+</span>
+                            <span class="stat-label">Years of Excellence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">400+</span>
+                            <span class="stat-label">Client Families Served</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">Active</span>
+                            <span class="stat-label">Portfolio Monitoring</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta-card">
+                        <h4>Ready to Optimize Your Wealth?</h4>
+                        <p>Schedule a complimentary portfolio review with our investment team</p>
+                        <a href="contact.html" class="btn btn-primary btn-block">
+                            Schedule Review
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Business Growth Consulting Section -->
+    <section class="service-section alt-bg" id="business-consulting">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <span class="section-label">Exclusive Expertise</span>
+                <h2 class="section-title">Business Growth Consulting</h2>
+                <p class="section-subtitle">
+                    Leveraging 15 years of private equity experience to help business owners scale, optimize, and maximize value
+                </p>
+            </div>
+            
+            <div class="banking-services-grid">
+                <div class="banking-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="banking-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business Turnaround Strategies</h3>
+                    <p>Drawing from private equity experience to help struggling businesses return to profitability</p>
+                    <ul>
+                        <li>Operational efficiency analysis</li>
+                        <li>Cost reduction strategies</li>
+                        <li>Revenue optimization</li>
+                        <li>Cash flow management</li>
+                    </ul>
+                </div>
+                
+                <div class="banking-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="banking-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Growth Planning & Expansion</h3>
+                    <p>Strategic planning for business growth with proven private equity methodologies</p>
+                    <ul>
+                        <li>Market expansion analysis</li>
+                        <li>Scaling operations planning</li>
+                        <li>Capital allocation strategies</li>
+                        <li>Growth financing solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="banking-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="banking-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Business Valuation & Exit Planning</h3>
+                    <p>Maximize business value with expert valuation and strategic exit planning</p>
+                    <ul>
+                        <li>Business valuation assessments</li>
+                        <li>Exit strategy development</li>
+                        <li>Value enhancement planning</li>
+                        <li>Succession planning</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="banking-benefits" data-aos="fade-up">
+                <h3>The Private Equity Advantage</h3>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>15 Years Experience</h4>
+                        <p>Real private equity experience in business operations and growth</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>USC MBA Expertise</h4>
+                        <p>Advanced business education from prestigious Marshall School</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-family"></i>
+                        <h4>Family Business Understanding</h4>
+                        <p>Grew up in family business environment since 1978</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Proven Results</h4>
+                        <p>Track record of successful business transformations and growth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Estate Planning Section -->
+    <section class="service-section" id="estate-planning">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <span class="section-label">Legacy Protection</span>
+                <h2 class="section-title">Estate Planning</h2>
+                <p class="section-subtitle">
+                    Sophisticated strategies to preserve your wealth and ensure a seamless 
+                    transfer to future generations
+                </p>
+            </div>
+            
+            <div class="estate-services">
+                <div class="estate-main" data-aos="fade-right">
+                    <h3>Comprehensive Estate Solutions</h3>
+                    <p class="lead">
+                        Our estate planning services help you create a lasting legacy while minimizing 
+                        tax implications and ensuring your wishes are carried out precisely as intended.
+                    </p>
+                    
+                    <div class="estate-service-list">
+                        <div class="estate-service">
+                            <div class="service-header-item">
+                                <i class="fas fa-file-contract"></i>
+                                <h4>Trust Services</h4>
+                            </div>
+                            <p>Design and implementation of revocable and irrevocable trusts, charitable remainder trusts, 
+                            and generation-skipping trusts tailored to your specific needs.</p>
+                        </div>
+                        
+                        <div class="estate-service">
+                            <div class="service-header-item">
+                                <i class="fas fa-exchange-alt"></i>
+                                <h4>Wealth Transfer Strategies</h4>
+                            </div>
+                            <p>Strategic gifting programs, family limited partnerships, and other advanced techniques 
+                            to efficiently transfer wealth while minimizing estate taxes.</p>
+                        </div>
+                        
+                        <div class="estate-service">
+                            <div class="service-header-item">
+                                <i class="fas fa-heart"></i>
+                                <h4>Charitable Planning</h4>
+                            </div>
+                            <p>Donor-advised funds, private foundations, and charitable trusts that align your 
+                            philanthropic goals with tax-efficient giving strategies.</p>
+                        </div>
+                        
+                        <div class="estate-service">
+                            <div class="service-header-item">
+                                <i class="fas fa-briefcase"></i>
+                                <h4>Business Succession</h4>
+                            </div>
+                            <p>Comprehensive planning for family business transitions, including buy-sell agreements, 
+                            valuation strategies, and leadership succession planning.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="estate-sidebar" data-aos="fade-left">
+                    <div class="estate-calculator">
+                        <h4>Estate Tax Calculator</h4>
+                        <p>Estimate potential estate taxes and discover planning opportunities</p>
+                        <a href="#" class="btn btn-outline">
+                            Calculate Now
+                            <i class="fas fa-calculator"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="estate-guide">
+                        <h4>Free Estate Planning Guide</h4>
+                        <p>Download our comprehensive guide to estate planning for high-net-worth families</p>
+                        <form class="guide-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary">
+                                Download Guide
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="estate-facts">
+                        <h4>Did You Know?</h4>
+                        <div class="fact">
+                            <i class="fas fa-info-circle"></i>
+                            <p>The federal estate tax exemption for 2024 is $13.61 million per individual</p>
+                        </div>
+                        <div class="fact">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Proper planning can reduce estate taxes by up to 40% or more</p>
+                        </div>
+                        <div class="fact">
+                            <i class="fas fa-info-circle"></i>
+                            <p>70% of wealthy families lose their wealth by the second generation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Retirement Planning Section -->
+    <section class="service-section alt-bg" id="retirement-planning">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <span class="section-label">Strategic Planning</span>
+                <h2 class="section-title">Retirement Planning</h2>
+                <p class="section-subtitle">
+                    Comprehensive strategies to ensure a comfortable and secure retirement lifestyle
+                </p>
+            </div>
+            
+            <div class="service-content-grid">
+                <div class="service-main" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=2970" alt="Retirement Planning" class="service-image">
+                    
+                    <div class="service-description">
+                        <h3>Secure Your Financial Future</h3>
+                        <p>
+                            Retirement planning is more than just accumulating assets—it's about creating a comprehensive 
+                            strategy that ensures your retirement lifestyle matches your dreams. Our retirement planning 
+                            services address all aspects of your financial future, from income replacement to healthcare costs.
+                        </p>
+                        <p>
+                            We work closely with you to develop customized retirement strategies that account for inflation, 
+                            market volatility, and changing life circumstances. Our goal is to provide you with confidence 
+                            that your retirement years will be financially secure and fulfilling.
+                        </p>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h4>Our Retirement Process</h4>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <span class="step-number">01</span>
+                                <div class="process-step-content">
+                                    <h5>Income Replacement Analysis</h5>
+                                    <p>Detailed analysis of your retirement income needs and sources</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">02</span>
+                                <div class="process-step-content">
+                                    <h5>Asset Allocation Strategy</h5>
+                                    <p>Strategic portfolio positioning for retirement income generation</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">03</span>
+                                <div class="process-step-content">
+                                    <h5>Risk Management</h5>
+                                    <p>Protection strategies for healthcare costs and market downturns</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">04</span>
+                                <div class="process-step-content">
+                                    <h5>Social Security Optimization</h5>
+                                    <p>Maximize your Social Security benefits through strategic timing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar" data-aos="fade-left">
+                    <div class="service-features">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 401(k) & 403(b) Optimization</li>
+                            <li><i class="fas fa-check"></i> IRA & Roth IRA Strategies</li>
+                            <li><i class="fas fa-check"></i> Pension Maximization</li>
+                            <li><i class="fas fa-check"></i> Healthcare Cost Planning</li>
+                            <li><i class="fas fa-check"></i> Long-Term Care Insurance</li>
+                            <li><i class="fas fa-check"></i> Medicare Supplement Planning</li>
+                            <li><i class="fas fa-check"></i> Tax-Efficient Withdrawals</li>
+                            <li><i class="fas fa-check"></i> Legacy Planning Integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-stats">
+                        <div class="stat">
+                            <span class="stat-value">30+</span>
+                            <span class="stat-label">Years of Excellence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">400+</span>
+                            <span class="stat-label">Client Families Served</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">Securing A</span>
+                            <span class="stat-label">Retirement Future</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-cta-card">
+                        <h4>Ready to Plan Your Retirement?</h4>
+                        <p>Schedule a complimentary retirement planning consultation with our team</p>
+                        <a href="contact.html" class="btn btn-primary btn-block">
+                            Schedule Review
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tax Advisory Section -->
+    <section class="service-section alt-bg" id="tax-advisory">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <span class="section-label">Strategic Planning</span>
+                <h2 class="section-title">Tax Advisory Services</h2>
+                <p class="section-subtitle">
+                    Proactive tax strategies to maximize after-tax returns and preserve wealth
+                </p>
+            </div>
+            
+            <div class="tax-services-grid">
+                <div class="tax-strategy-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="strategy-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Tax-Efficient Investing</h3>
+                    <ul>
+                        <li>Asset location optimization</li>
+                        <li>Tax-loss harvesting</li>
+                        <li>Municipal bond strategies</li>
+                        <li>Qualified dividend planning</li>
+                    </ul>
+                </div>
+                
+                <div class="tax-strategy-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="strategy-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Income Tax Planning</h3>
+                    <ul>
+                        <li>Income deferral strategies</li>
+                        <li>Deduction optimization</li>
+                        <li>Alternative minimum tax planning</li>
+                        <li>State tax minimization</li>
+                    </ul>
+                </div>
+                
+                <div class="tax-strategy-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="strategy-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Estate & Gift Tax</h3>
+                    <ul>
+                        <li>Annual exclusion gifting</li>
+                        <li>Grantor retained annuity trusts</li>
+                        <li>Charitable lead trusts</li>
+                        <li>Family limited partnerships</li>
+                    </ul>
+                </div>
+                
+                <div class="tax-strategy-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="strategy-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Business Tax Strategies</h3>
+                    <ul>
+                        <li>Entity structure optimization</li>
+                        <li>Retirement plan design</li>
+                        <li>Stock option planning</li>
+                        <li>Business sale structuring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Philanthropy Section -->
+    <section class="service-section" id="philanthropy">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <span class="section-label">Giving Back</span>
+                <h2 class="section-title">Philanthropic Advisory</h2>
+                <p class="section-subtitle">
+                    Strategic charitable giving that maximizes impact while providing tax benefits
+                </p>
+            </div>
+            
+            <div class="philanthropy-content">
+                <div class="philanthropy-intro" data-aos="fade-up">
+                    <p class="lead">
+                        Transform your charitable vision into lasting impact. Our philanthropic advisory services 
+                        help you create a giving strategy that aligns with your values, maximizes your impact, 
+                        and provides significant tax advantages.
+                    </p>
+                </div>
+                
+                <div class="giving-options" data-aos="fade-up">
+                    <h3>Charitable Giving Vehicles</h3>
+                    <div class="options-grid">
+                        <div class="option-card">
+                            <h4>Donor-Advised Funds</h4>
+                            <p>Immediate tax deduction with flexibility to grant over time</p>
+                            <div class="option-benefits">
+                                <span><i class="fas fa-check"></i> Tax deduction up to 60% of AGI</span>
+                                <span><i class="fas fa-check"></i> Investment growth tax-free</span>
+                                <span><i class="fas fa-check"></i> Family involvement options</span>
+                            </div>
+                        </div>
+                        
+                        <div class="option-card">
+                            <h4>Private Foundations</h4>
+                            <p>Maximum control and perpetual family legacy</p>
+                            <div class="option-benefits">
+                                <span><i class="fas fa-check"></i> Complete control over giving</span>
+                                <span><i class="fas fa-check"></i> Family board participation</span>
+                                <span><i class="fas fa-check"></i> Perpetual existence</span>
+                            </div>
+                        </div>
+                        
+                        <div class="option-card">
+                            <h4>Charitable Trusts</h4>
+                            <p>Income stream with charitable benefits</p>
+                            <div class="option-benefits">
+                                <span><i class="fas fa-check"></i> Income tax deduction</span>
+                                <span><i class="fas fa-check"></i> Estate tax reduction</span>
+                                <span><i class="fas fa-check"></i> Income for life options</span>
+                            </div>
+                        </div>
+                        
+                        <div class="option-card">
+                            <h4>Direct Gifting</h4>
+                            <p>Immediate impact with appreciated assets</p>
+                            <div class="option-benefits">
+                                <span><i class="fas fa-check"></i> Avoid capital gains tax</span>
+                                <span><i class="fas fa-check"></i> Full fair market value deduction</span>
+                                <span><i class="fas fa-check"></i> Immediate impact</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+<!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Elevate Your Wealth Management Experience?</h2>
+                <p>Discover how our comprehensive services can help you achieve your financial goals</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-white btn-large">
+                        Schedule Your Consultation
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="cta-contact">
+                        <span>Prefer to talk?</span>
+                        <a href="tel:9497299994" class="cta-phone">
+                            <i class="fas fa-phone"></i>
+                            (949) 729-9994
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo-enhanced">
+                            <img src="images/sporos-logo.png" alt="Sporos Wealth Management Logo" class="footer-logo-img">
+                            <div class="footer-brand-text">
+                                <span class="footer-brand-main">SPOROS WEALTH MANAGEMENT</span>
+                                <span class="footer-brand-sub">Elite Private Wealth Advisory</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            Elite private wealth advisory services for discerning clients in Orange County and beyond.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html#team">Leadership</a></li>
+                            <li><a href="about.html#philosophy">Philosophy</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#wealth-management">Wealth Management</a></li>
+                            <li><a href="#business-consulting">Business Consulting</a></li>
+                            <li><a href="#estate-planning">Estate Planning</a></li>
+                            <li><a href="#tax-advisory">Tax Strategy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>17011 Beach Blvd, Suite 565<br>Huntington Beach, CA 92647</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(949) 729-9994</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nasar@sporoswealth.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-legal">
+                        <p>&copy; <span class="current-year">2024</span> Sporos Wealth Management. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="https://www.lpl.com/disclosures/privacy-security.html" target="_blank">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="https://www.lpl.com/disclosures.html" target="_blank">Disclosures</a>
+                            <a href="https://www.lpl.com/content/dam/lpl-www/documents/disclosures/lpl-financial-relationship-summary.pdf" target="_blank">LPL Financial Form CRS</a>
+                        </div>
+                    </div>
+                    <div class="footer-badges">
+                        <img src="https://www.finra.org/sites/default/files/finra-logo-white.png" alt="FINRA" style="height: 40px; width: auto; margin-right: 15px;">
+                        <img src="https://www.sipc.org/media/files/sipc-logo-white.png" alt="SIPC" style="height: 40px; width: auto; margin-right: 15px;">
+                        <img src="https://www.lpl.com/content/dam/lpl-www/documents/logos/lpl-financial-logo-white.png" alt="LPL Financial" style="height: 40px; width: auto;">
+                    </div>
+                </div>
+                
+                <div class="footer-disclosures">
+                    <p><strong>Important Disclosures:</strong> Securities and Advisory services offered through LPL Financial, a Registered Investment Advisor. Member FINRA & SIPC. LPL Financial representatives may discuss securities business only with residents of: AZ, CA, CO, NV, OK, OR, PA, TX, WA. <a href="https://brokercheck.finra.org/" target="_blank">Check advisor background on FINRA's BrokerCheck</a>.</p>
+                    
+                    <p>Content is developed from sources believed to be providing accurate information. Information is not intended as tax or legal advice. Please consult legal or tax professionals for specific information regarding your individual situation. We take protecting your data and privacy seriously. <a href="#" class="ccpa-link">Do not sell my personal information</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

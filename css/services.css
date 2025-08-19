@@ -1,0 +1,964 @@
+/* =====================================================
+   SERVICES PAGE SPECIFIC STYLES
+   ===================================================== */
+
+/* Services Hero */
+.services-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.services-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.services-hero .hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.services-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(27, 54, 93, 0.95) 0%,
+        rgba(10, 22, 40, 0.8) 100%
+    );
+}
+
+.services-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.services-hero .highlight {
+    color: var(--primary-gold);
+}
+
+/* Enhanced Typography for Services Hero */
+.services-hero .page-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-gold);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.services-hero .page-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.services-hero .page-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-hero .page-label {
+        font-size: 1.1rem;
+    }
+    
+    .services-hero .page-title {
+        font-size: 2.8rem;
+    }
+    
+    .services-hero .page-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Service Navigation */
+.service-nav {
+    background: white;
+    padding: 0;
+    position: sticky;
+    top: 100px;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.service-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.service-nav-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.service-nav-item {
+    flex: 1;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition-base);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.service-nav-item:hover {
+    background: var(--bg-light);
+    color: var(--primary-gold);
+}
+
+.service-nav-item.active {
+    color: var(--primary-gold);
+    border-bottom-color: var(--primary-gold);
+    background: var(--bg-light);
+}
+
+.service-nav-item i {
+    font-size: 24px;
+}
+
+.service-nav-item span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Service Sections */
+.service-section {
+    padding: 100px 0;
+}
+
+.service-section.alt-bg {
+    background: var(--bg-light);
+}
+
+.service-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Wealth Management Section */
+.service-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.service-image {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.service-description {
+    margin-bottom: 50px;
+}
+
+.service-description h3 {
+    font-size: 32px;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+}
+
+.service-description p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.service-process h4 {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+}
+
+.process-steps {
+    display: grid;
+    gap: 25px;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: var(--bg-light);
+    border-radius: 15px;
+    transition: var(--transition-base);
+}
+
+.process-step:hover {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-navy));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.process-step-content {
+    flex: 1;
+}
+
+.process-step h5 {
+    font-size: 18px;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.process-step p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Service Sidebar */
+.service-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-features {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-features h4 {
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+}
+
+.service-features ul {
+    list-style: none;
+}
+
+.service-features li {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.service-features i {
+    color: var(--primary-gold);
+}
+
+.service-stats {
+    display: grid;
+    gap: 20px;
+}
+
+.service-stats .stat {
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-gold);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.service-cta-card {
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-navy));
+    padding: 35px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+.service-cta-card h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-cta-card p {
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Private Banking Section */
+.banking-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.banking-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.banking-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.banking-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--primary-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.banking-icon i {
+    font-size: 30px;
+    color: var(--primary-navy);
+}
+
+.banking-card h3 {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.banking-card p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.banking-card ul {
+    list-style: none;
+}
+
+.banking-card li {
+    padding: 8px 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 20px;
+}
+
+.banking-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+    font-weight: bold;
+}
+
+.banking-benefits {
+    background: white;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.banking-benefits h3 {
+    font-size: 32px;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.benefit {
+    text-align: center;
+}
+
+.benefit i {
+    font-size: 36px;
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+}
+
+.benefit h4 {
+    font-size: 18px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Estate Planning Section */
+.estate-services {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.estate-main h3 {
+    font-size: 32px;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+}
+
+.estate-main .lead {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+}
+
+.estate-service-list {
+    display: grid;
+    gap: 30px;
+}
+
+.estate-service {
+    padding: 30px;
+    background: var(--bg-light);
+    border-radius: 15px;
+    transition: var(--transition-base);
+}
+
+.estate-service:hover {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-header-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.service-header-item i {
+    font-size: 24px;
+    color: var(--primary-gold);
+}
+
+.service-header-item h4 {
+    font-size: 20px;
+    color: var(--primary-dark);
+}
+
+.estate-service p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.estate-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.estate-calculator,
+.estate-guide,
+.estate-facts {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.estate-calculator h4,
+.estate-guide h4,
+.estate-facts h4 {
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.estate-calculator p,
+.estate-guide p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.btn-outline:hover {
+    background: var(--primary-gold);
+    color: white;
+}
+
+.guide-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.guide-form input {
+    padding: 12px 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 50px;
+    font-size: 14px;
+    transition: var(--transition-base);
+}
+
+.guide-form input:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+}
+
+.fact {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.fact:last-child {
+    margin-bottom: 0;
+}
+
+.fact i {
+    color: var(--primary-gold);
+    font-size: 18px;
+}
+
+.fact p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Tax Advisory Section */
+.tax-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.tax-strategy-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.tax-strategy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.strategy-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-gold), var(--accent-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.strategy-icon i {
+    font-size: 26px;
+    color: var(--primary-navy);
+}
+
+.tax-strategy-card h3 {
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+.tax-strategy-card ul {
+    list-style: none;
+}
+
+.tax-strategy-card li {
+    padding: 8px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tax-strategy-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+}
+
+/* Philanthropy Section */
+.philanthropy-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.philanthropy-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.philanthropy-intro .lead {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.giving-options {
+    margin-bottom: 80px;
+}
+
+.giving-options h3 {
+    font-size: 32px;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.option-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.option-card h4 {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.option-card > p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.option-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-benefits span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.option-benefits i {
+    color: var(--primary-gold);
+}
+
+.impact-metrics {
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+    padding: 60px;
+    border-radius: 20px;
+    color: white;
+}
+
+.impact-metrics h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+.metric-label {
+    font-size: 14px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Service Comparison Table */
+.service-comparison {
+    padding: 100px 0;
+    background: var(--bg-light);
+}
+
+.comparison-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.tier-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.tier-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.tier-card.featured {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(212, 165, 116, 0.2);
+}
+
+.tier-header {
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+    padding: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.tier-card.featured .tier-header {
+    background: linear-gradient(135deg, var(--primary-gold), var(--primary-navy));
+}
+
+.tier-header h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.tier-minimum {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.tier-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: var(--primary-gold);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tier-features {
+    padding: 40px;
+}
+
+.tier-features .feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.tier-features .feature:last-child {
+    border-bottom: none;
+}
+
+.feature.included i {
+    color: var(--primary-gold);
+}
+
+.feature:not(.included) i {
+    color: var(--text-light);
+}
+
+.feature span {
+    color: var(--text-secondary);
+}
+
+.tier-card .btn {
+    margin: 0 40px 40px;
+    width: calc(100% - 80px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .service-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .estate-services {
+        grid-template-columns: 1fr;
+    }
+    
+    .banking-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tax-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 968px) {
+    .service-nav-item {
+        padding: 20px 15px;
+    }
+    
+    .service-nav-item i {
+        font-size: 20px;
+    }
+    
+    .service-nav-item span {
+        font-size: 12px;
+    }
+    
+    .banking-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .comparison-table {
+        grid-template-columns: 1fr;
+    }
+    
+    .tier-card.featured {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        height: 60vh;
+        min-height: 500px;
+    }
+    
+    .service-nav {
+        top: 80px;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-bottom: 15px;
+    }
+    
+    .process-step-content {
+        width: 100%;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tax-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}

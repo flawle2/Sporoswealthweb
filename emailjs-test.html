@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Debugging Tool - Sporos Wealth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #2B4C6F;
+        }
+        button {
+            background: #D4A574;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #C19660;
+        }
+        .success {
+            color: #22c55e;
+            font-weight: bold;
+        }
+        .error {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        .log {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .config {
+            background: #e6f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .config h4 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 EmailJS Debugging Tool</h1>
+        <p>This tool will help diagnose EmailJS configuration issues for Sporos Wealth Management.</p>
+        
+        <div class="config">
+            <h4>📧 Current Configuration:</h4>
+            <p><strong>Service ID:</strong> service_2zugw66</p>
+            <p><strong>Template ID:</strong> template_y84zkx6</p>
+            <p><strong>API Key:</strong> yTq_0ZL0Nj4flf6bn</p>
+        </div>
+        
+        <div class="test-section">
+            <h3>🔍 Step 1: Check EmailJS Library</h3>
+            <p>Verify that EmailJS library is loaded correctly.</p>
+            <button onclick="testLibrary()">Test Library Loading</button>
+            <div id="library-result" class="log"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🔑 Step 2: Test API Key</h3>
+            <p>Test if the API key initialization works.</p>
+            <button onclick="testApiKey()">Test API Key</button>
+            <div id="api-result" class="log"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>📨 Step 3: Send Test Email</h3>
+            <p>Send a minimal test email with basic parameters.</p>
+            <button onclick="sendTestEmail()">Send Test Email</button>
+            <div id="test-result" class="log"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>📋 Step 4: Send Full Form Data</h3>
+            <p>Send email with all form parameters that the actual form uses.</p>
+            <button onclick="sendFullTest()">Send Full Test</button>
+            <div id="full-result" class="log"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🎯 Troubleshooting Checklist</h3>
+            <div id="checklist">
+                <p>✅ <strong>EmailJS Account Setup:</strong></p>
+                <ul>
+                    <li>Go to <a href="https://dashboard.emailjs.com" target="_blank">EmailJS Dashboard</a></li>
+                    <li>Verify service "service_2zugw66" exists and is active</li>
+                    <li>Verify template "template_y84zkx6" exists</li>
+                    <li>Check API key "yTq_0ZL0Nj4flf6bn" is correct</li>
+                </ul>
+                
+                <p>✅ <strong>Template Variables:</strong></p>
+                <p>Your template should include these variables:</p>
+                <ul>
+                    <li>{{from_name}}</li>
+                    <li>{{from_email}}</li>
+                    <li>{{phone}}</li>
+                    <li>{{assets}}</li>
+                    <li>{{services}}</li>
+                    <li>{{consultation_type}}</li>
+                    <li>{{preferred_time}}</li>
+                    <li>{{preferred_days}}</li>
+                    <li>{{message}}</li>
+                    <li>{{to_email}}</li>
+                </ul>
+                
+                <p>✅ <strong>Domain Restrictions:</strong></p>
+                <ul>
+                    <li>Check if your domain is allowed in EmailJS settings</li>
+                    <li>Add "file://" and "localhost" for local testing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script>
+        let logElement = null;
+        
+        function log(message, element) {
+            const timestamp = new Date().toLocaleTimeString();
+            const logMessage = `[${timestamp}] ${message}\n`;
+            element.textContent += logMessage;
+            element.scrollTop = element.scrollHeight;
+            console.log(message);
+        }
+        
+        function testLibrary() {
+            logElement = document.getElementById('library-result');
+            logElement.textContent = '';
+            
+            log('🔍 Testing EmailJS library...', logElement);
+            
+            if (typeof emailjs === 'undefined') {
+                log('❌ EmailJS library not loaded!', logElement);
+                logElement.innerHTML += '<p class="error">EmailJS library failed to load. Check your internet connection.</p>';
+                return;
+            }
+            
+            log('✅ EmailJS library loaded successfully', logElement);
+            log(`📦 EmailJS version: ${emailjs.version || 'Unknown'}`, logElement);
+            
+            // Initialize EmailJS
+            try {
+                emailjs.init('yTq_0ZL0Nj4flf6bn');
+                log('✅ EmailJS initialized with API key', logElement);
+            } catch (error) {
+                log(`❌ Failed to initialize EmailJS: ${error.message}`, logElement);
+            }
+        }
+        
+        function testApiKey() {
+            logElement = document.getElementById('api-result');
+            logElement.textContent = '';
+            
+            log('🔑 Testing API key initialization...', logElement);
+            
+            if (typeof emailjs === 'undefined') {
+                log('❌ EmailJS not loaded. Run Step 1 first.', logElement);
+                return;
+            }
+            
+            try {
+                emailjs.init('yTq_0ZL0Nj4flf6bn');
+                log('✅ API key initialized successfully', logElement);
+                log('🔧 API Key: yTq_0ZL0Nj4flf6bn', logElement);
+            } catch (error) {
+                log(`❌ API key initialization failed: ${error.message}`, logElement);
+            }
+        }
+        
+        function sendTestEmail() {
+            logElement = document.getElementById('test-result');
+            logElement.textContent = '';
+            
+            log('📨 Sending minimal test email...', logElement);
+            
+            if (typeof emailjs === 'undefined') {
+                log('❌ EmailJS not loaded. Run Step 1 first.', logElement);
+                return;
+            }
+            
+            const testParams = {
+                from_name: 'Test User',
+                from_email: 'test@example.com',
+                phone: '555-0123',
+                message: 'This is a test email from the debugging tool',
+                to_email: 'nasar@sporoswealth.com'
+            };
+            
+            log('🚀 Sending with parameters:', logElement);
+            log(JSON.stringify(testParams, null, 2), logElement);
+            
+            emailjs.send('service_2zugw66', 'template_y84zkx6', testParams)
+                .then(function(response) {
+                    log('✅ TEST EMAIL SENT SUCCESSFULLY!', logElement);
+                    log(`📊 Status: ${response.status}`, logElement);
+                    log(`📝 Response: ${response.text}`, logElement);
+                    logElement.innerHTML += '<p class="success">✅ EmailJS is working correctly!</p>';
+                })
+                .catch(function(error) {
+                    log('❌ TEST EMAIL FAILED!', logElement);
+                    log(`❌ Error Status: ${error.status}`, logElement);
+                    log(`❌ Error Message: ${error.text}`, logElement);
+                    log(`❌ Full Error: ${JSON.stringify(error, null, 2)}`, logElement);
+                    
+                    if (error.status === 404) {
+                        logElement.innerHTML += '<p class="error">❌ Service or Template not found. Check your EmailJS dashboard.</p>';
+                    } else if (error.status === 401) {
+                        logElement.innerHTML += '<p class="error">❌ Unauthorized. Check your API key.</p>';
+                    } else if (error.status === 422) {
+                        logElement.innerHTML += '<p class="error">❌ Template variable mismatch. Check your template.</p>';
+                    }
+                });
+        }
+        
+        function sendFullTest() {
+            logElement = document.getElementById('full-result');
+            logElement.textContent = '';
+            
+            log('📋 Sending full form test with all parameters...', logElement);
+            
+            if (typeof emailjs === 'undefined') {
+                log('❌ EmailJS not loaded. Run Step 1 first.', logElement);
+                return;
+            }
+            
+            const fullParams = {
+                from_name: 'John Doe',
+                from_email: 'john.doe@example.com',
+                phone: '555-123-4567',
+                assets: '1m-5m',
+                services: 'Wealth Management, Estate Planning',
+                consultation_type: 'Virtual Meeting (Zoom/Teams)',
+                preferred_time: 'Morning (9 AM - 12 PM)',
+                preferred_days: 'Monday, Wednesday, Friday',
+                message: 'I am interested in comprehensive wealth management services and would like to schedule a consultation.',
+                to_email: 'nasar@sporoswealth.com'
+            };
+            
+            log('🚀 Sending with full parameters:', logElement);
+            log(JSON.stringify(fullParams, null, 2), logElement);
+            
+            emailjs.send('service_2zugw66', 'template_y84zkx6', fullParams)
+                .then(function(response) {
+                    log('✅ FULL TEST EMAIL SENT SUCCESSFULLY!', logElement);
+                    log(`📊 Status: ${response.status}`, logElement);
+                    log(`📝 Response: ${response.text}`, logElement);
+                    logElement.innerHTML += '<p class="success">✅ Full form integration is working correctly!</p>';
+                })
+                .catch(function(error) {
+                    log('❌ FULL TEST EMAIL FAILED!', logElement);
+                    log(`❌ Error Status: ${error.status}`, logElement);
+                    log(`❌ Error Message: ${error.text}`, logElement);
+                    log(`❌ Full Error: ${JSON.stringify(error, null, 2)}`, logElement);
+                    
+                    if (error.status === 422) {
+                        logElement.innerHTML += '<p class="error">❌ Template variables don\'t match. Check your EmailJS template includes all variables listed in the checklist.</p>';
+                    }
+                });
+        }
+        
+        // Auto-run library test on page load
+        window.addEventListener('load', function() {
+            setTimeout(testLibrary, 1000);
+        });
+    </script>
+</body>
+</html>
