@@ -53,20 +53,27 @@ document.addEventListener('DOMContentLoaded', function() {
             
             console.log('Mobile menu handlers attached successfully!');
             
-            // Close menu when clicking main navigation links
+            // Handle mobile navigation - close menu on navigation
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function(e) {
+                // Use mousedown instead of click to fire before any preventDefault
+                link.addEventListener('mousedown', function(e) {
                     if (window.innerWidth <= 968) {
-                        // For mobile, make all nav links work normally (navigate to pages)
-                        // Remove any preventDefault that might be stopping navigation
-                        console.log('Nav link clicked:', this.href);
-                        
-                        // Close the menu after a short delay to allow navigation
-                        setTimeout(() => {
-                            newToggle.classList.remove('active');
-                            menu.classList.remove('active');
-                            document.body.classList.remove('menu-open');
-                        }, 100);
+                        console.log('Mobile nav mousedown:', this.href);
+                        // Close menu but don't interfere with navigation
+                        newToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    }
+                });
+                
+                // Also handle touchstart for mobile devices
+                link.addEventListener('touchstart', function(e) {
+                    if (window.innerWidth <= 968) {
+                        console.log('Mobile nav touchstart:', this.href);
+                        // Close menu immediately
+                        newToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        document.body.classList.remove('menu-open');
                     }
                 });
             });
@@ -101,4 +108,22 @@ window.toggleMobileMenu = function() {
         menu.classList.toggle('active');
         document.body.classList.toggle('menu-open');
     }
+};
+
+// Backup navigation function for mobile
+window.navigateToPage = function(url) {
+    console.log('Direct navigation to:', url);
+    
+    // Close mobile menu
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const menu = document.querySelector('.nav-menu');
+    
+    if (toggle && menu) {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+    
+    // Navigate directly
+    window.location.href = url;
 };

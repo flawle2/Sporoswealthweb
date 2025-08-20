@@ -1524,6 +1524,8 @@ section {
         text-align: left;
         display: block;
         width: 100%;
+        pointer-events: auto;
+        cursor: pointer;
     }
     
     .nav-menu.active .nav-link:hover {

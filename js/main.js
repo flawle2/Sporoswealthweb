@@ -57,26 +57,15 @@ if (mobileMenuToggle && navMenu) {
     console.error('Mobile menu elements not found!');
 }
 
-// Handle navigation links for mobile
+// Handle navigation links for desktop dropdowns only
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 968) {
-            // On mobile, always allow navigation - don't prevent default
-            // Just close the menu
-            if (mobileMenuToggle && navMenu) {
-                setTimeout(() => {
-                    mobileMenuToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                }, 50);
-            }
-        } else {
-            // Desktop behavior - handle dropdowns normally
-            if (link.parentElement.classList.contains('has-dropdown')) {
-                e.preventDefault();
-                link.parentElement.classList.toggle('active');
-            }
+        // Only handle dropdown behavior on desktop
+        if (window.innerWidth > 968 && link.parentElement.classList.contains('has-dropdown')) {
+            e.preventDefault();
+            link.parentElement.classList.toggle('active');
         }
+        // On mobile (width <= 968), do nothing here - let mobile-menu.js handle it
     });
 });
 
