@@ -53,16 +53,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             console.log('Mobile menu handlers attached successfully!');
             
-            // Close menu when clicking main navigation links only
+            // Close menu when clicking main navigation links
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function(e) {
                     if (window.innerWidth <= 968) {
-                        // Don't close for dropdown parents, only for actual page links
-                        if (!this.parentElement.classList.contains('has-dropdown')) {
+                        // For mobile, make all nav links work normally (navigate to pages)
+                        // Remove any preventDefault that might be stopping navigation
+                        console.log('Nav link clicked:', this.href);
+                        
+                        // Close the menu after a short delay to allow navigation
+                        setTimeout(() => {
                             newToggle.classList.remove('active');
                             menu.classList.remove('active');
                             document.body.classList.remove('menu-open');
-                        }
+                        }, 100);
                     }
                 });
             });

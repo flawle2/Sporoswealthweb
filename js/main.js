@@ -57,19 +57,24 @@ if (mobileMenuToggle && navMenu) {
     console.error('Mobile menu elements not found!');
 }
 
-// Close mobile menu when clicking on a link
+// Handle navigation links for mobile
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
-        // If it's a dropdown parent on mobile, prevent default
-        if (window.innerWidth <= 968 && link.parentElement.classList.contains('has-dropdown')) {
-            e.preventDefault();
-            link.parentElement.classList.toggle('active');
-        } else {
-            // Close menu for regular links
+        if (window.innerWidth <= 968) {
+            // On mobile, always allow navigation - don't prevent default
+            // Just close the menu
             if (mobileMenuToggle && navMenu) {
-                mobileMenuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.classList.remove('menu-open');
+                setTimeout(() => {
+                    mobileMenuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }, 50);
+            }
+        } else {
+            // Desktop behavior - handle dropdowns normally
+            if (link.parentElement.classList.contains('has-dropdown')) {
+                e.preventDefault();
+                link.parentElement.classList.toggle('active');
             }
         }
     });
