@@ -53,13 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             console.log('Mobile menu handlers attached successfully!');
             
-            // Close menu when clicking links
-            document.querySelectorAll('.nav-link, .dropdown-link').forEach(link => {
+            // Close menu when clicking main navigation links only
+            document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', function() {
                     if (window.innerWidth <= 968) {
-                        newToggle.classList.remove('active');
-                        menu.classList.remove('active');
-                        document.body.classList.remove('menu-open');
+                        // Don't close for dropdown parents, only for actual page links
+                        if (!this.parentElement.classList.contains('has-dropdown')) {
+                            newToggle.classList.remove('active');
+                            menu.classList.remove('active');
+                            document.body.classList.remove('menu-open');
+                        }
                     }
                 });
             });
