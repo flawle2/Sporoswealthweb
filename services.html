@@ -864,50 +864,7 @@
     
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Clean mobile menu functionality
-        window.simpleToggle = function() {
-            const menu = document.querySelector('.nav-menu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            const body = document.body;
-            
-            if (menu && toggle) {
-                // Toggle active class
-                const isActive = menu.classList.contains('active');
-                
-                if (isActive) {
-                    // Close menu
-                    menu.classList.remove('active');
-                    toggle.classList.remove('active');
-                    body.classList.remove('menu-open');
-                } else {
-                    // Open menu
-                    menu.classList.add('active');
-                    toggle.classList.add('active');
-                    body.classList.add('menu-open');
-                }
-            }
-        };
-        
-        // Close menu when clicking a nav link
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-menu .nav-link');
-            navLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    // Close menu when any link is clicked
-                    const menu = document.querySelector('.nav-menu');
-                    const toggle = document.querySelector('.mobile-menu-toggle');
-                    const body = document.body;
-                    
-                    if (menu && toggle) {
-                        menu.classList.remove('active');
-                        toggle.classList.remove('active');
-                        body.classList.remove('menu-open');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
     <script src="js/services.js"></script>
 </body>
 </html>
