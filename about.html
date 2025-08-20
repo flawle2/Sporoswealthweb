@@ -19,6 +19,63 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- CLEAN MOBILE MENU STYLES -->
+    <style>
+        @media (max-width: 968px) {
+            .nav-menu {
+                position: fixed !important;
+                top: 0 !important;
+                right: -100% !important;
+                width: 85% !important;
+                max-width: 380px !important;
+                height: 100vh !important;
+                background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15) !important;
+                transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+                z-index: 9999 !important;
+                padding: 120px 40px 40px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                border-left: 3px solid #d4a574 !important;
+            }
+            .nav-menu.active {
+                right: 0 !important;
+            }
+            .mobile-menu-toggle {
+                display: flex !important;
+                z-index: 10000 !important;
+                cursor: pointer !important;
+            }
+            .nav-menu .nav-list {
+                flex-direction: column !important;
+                gap: 0 !important;
+                align-items: stretch !important;
+            }
+            .nav-menu .nav-item {
+                margin: 0 !important;
+                border-bottom: 1px solid rgba(27, 54, 93, 0.1) !important;
+            }
+            .nav-menu .nav-link {
+                padding: 25px 0 !important;
+                font-size: 20px !important;
+                font-weight: 500 !important;
+                color: #1b365d !important;
+                text-align: left !important;
+                display: block !important;
+                width: 100% !important;
+            }
+            .nav-menu .nav-link:hover {
+                color: #d4a574 !important;
+                background: rgba(212, 165, 116, 0.05) !important;
+            }
+            .nav-menu .dropdown-menu {
+                display: none !important;
+            }
+            .nav-menu .nav-actions {
+                margin-top: 30px !important;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
@@ -97,7 +154,7 @@
                 </div>
             </div>
             
-            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <div class="mobile-menu-toggle" onclick="simpleToggle()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -553,7 +610,49 @@
     
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/main-simple.js"></script>
-    <script src="js/simple-mobile.js"></script>
+    <script>
+        // Clean mobile menu functionality
+        window.simpleToggle = function() {
+            const menu = document.querySelector('.nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const body = document.body;
+            
+            if (menu && toggle) {
+                // Toggle active class
+                const isActive = menu.classList.contains('active');
+                
+                if (isActive) {
+                    // Close menu
+                    menu.classList.remove('active');
+                    toggle.classList.remove('active');
+                    body.classList.remove('menu-open');
+                } else {
+                    // Open menu
+                    menu.classList.add('active');
+                    toggle.classList.add('active');
+                    body.classList.add('menu-open');
+                }
+            }
+        };
+        
+        // Close menu when clicking a nav link
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Close menu when any link is clicked
+                    const menu = document.querySelector('.nav-menu');
+                    const toggle = document.querySelector('.mobile-menu-toggle');
+                    const body = document.body;
+                    
+                    if (menu && toggle) {
+                        menu.classList.remove('active');
+                        toggle.classList.remove('active');
+                        body.classList.remove('menu-open');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
