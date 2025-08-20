@@ -1483,11 +1483,15 @@ section {
     .nav-menu.active {
         right: 0 !important;
         display: block !important;
+        border: 3px solid red !important; /* DEBUG: Red border to see menu */
     }
     
     .mobile-menu-toggle {
         display: flex !important;
         z-index: 1002 !important;
+        background: rgba(255, 0, 0, 0.1) !important; /* Temporary red tint for debugging */
+        cursor: pointer !important;
+        pointer-events: auto !important;
     }
     
     /* Mobile menu header */
