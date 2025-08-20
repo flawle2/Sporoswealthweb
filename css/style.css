@@ -481,17 +481,24 @@ img {
 }
 
 .stat-number.five-stars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    font-size: 24px;
-    height: 42px; /* Match height of text stat-numbers */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    font-size: 24px !important;
+    height: 42px !important; /* Match height of text stat-numbers */
+    margin-bottom: 5px !important;
 }
 
 .stat-number.five-stars i {
-    color: var(--accent-gold);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: var(--accent-gold) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
+    font-size: 24px !important;
+}
+
+/* Ensure five-stars uses same color as other stats */
+.hero-stats .five-stars i {
+    color: #F4E4C1 !important;
 }
 
 .stat-label {
