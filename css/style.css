@@ -485,8 +485,8 @@ img {
     justify-content: center !important;
     align-items: center !important;
     gap: 4px !important;
-    font-size: 24px !important;
-    height: 42px !important; /* Match height of text stat-numbers */
+    font-size: 28px !important; /* Slightly larger stars */
+    height: 36px !important; /* Adjust height for better alignment */
     margin-bottom: 5px !important;
 }
 
@@ -499,6 +499,11 @@ img {
 /* Ensure five-stars uses same color as other stats */
 .hero-stats .five-stars i {
     color: #F4E4C1 !important;
+}
+
+/* Adjust Five Star label positioning */
+.five-star-item .stat-label {
+    margin-top: 8px !important; /* Add extra space to align with other labels */
 }
 
 .stat-label {
