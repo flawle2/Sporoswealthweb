@@ -1564,11 +1564,6 @@ section {
         font-weight: 600;
     }
     
-    .nav-menu.active .client-login {
-        background: rgba(27, 54, 93, 0.1);
-        color: var(--primary-dark);
-    }
-    
     .nav-menu.active .cta-button {
         background: linear-gradient(135deg, var(--primary-gold), var(--primary-navy));
         color: white;
