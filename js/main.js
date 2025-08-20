@@ -30,12 +30,31 @@ window.addEventListener('scroll', function() {
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
-if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', function() {
+console.log('Mobile menu script loaded');
+console.log('Toggle element found:', !!mobileMenuToggle);
+console.log('Nav menu found:', !!navMenu);
+
+if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Mobile menu clicked');
         this.classList.toggle('active');
         navMenu.classList.toggle('active');
         document.body.classList.toggle('menu-open');
     });
+    
+    // Add touch event for better mobile support
+    mobileMenuToggle.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Mobile menu touched');
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+} else {
+    console.error('Mobile menu elements not found!');
 }
 
 // Close mobile menu when clicking on a link

@@ -341,15 +341,22 @@ img {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    position: relative;
+    z-index: 1002;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-menu-toggle span {
-    width: 25px;
-    height: 2px;
+    display: block;
+    width: 28px;
+    height: 3px;
     background: var(--primary-dark);
-    margin: 3px 0;
-    transition: var(--transition-base);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
 /* Mobile Menu Toggle Animation */
@@ -1457,27 +1464,29 @@ section {
     }
     
     .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 400px;
-        height: 100vh;
-        background: white;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease;
-        z-index: 1000;
-        padding: 100px 30px 30px;
-        overflow-y: auto;
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 80% !important;
+        max-width: 400px !important;
+        height: 100vh !important;
+        background: white !important;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1) !important;
+        transition: right 0.3s ease !important;
+        z-index: 1000 !important;
+        padding: 100px 30px 30px !important;
+        overflow-y: auto !important;
+        display: block !important;
     }
     
     .nav-menu.active {
-        right: 0;
+        right: 0 !important;
+        display: block !important;
     }
     
     .mobile-menu-toggle {
-        display: flex;
-        z-index: 1002;
+        display: flex !important;
+        z-index: 1002 !important;
     }
     
     /* Mobile menu styles */
