@@ -1,4 +1,4 @@
-// SUPER SIMPLE Mobile Menu - No conflicts
+// SUPER SIMPLE Mobile Menu - Absolutely no link interference
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Simple mobile menu loading...');
     
@@ -23,8 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleMenu();
         });
         
-        // Don't interfere with navigation links at all
-        // Let them work naturally
+        // Close menu when navigation links are clicked (but don't interfere with the navigation)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 968) {
+                    console.log('Mobile nav link clicked, closing menu:', this.href);
+                    // Close menu but let the link work normally
+                    toggle.classList.remove('active');
+                    menu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                    // Important: Don't preventDefault() - let navigation happen
+                }
+            });
+        });
         
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {

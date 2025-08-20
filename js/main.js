@@ -26,16 +26,21 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Handle dropdown behavior for desktop only
+// Handle dropdown behavior ONLY on desktop and ONLY for dropdown parents
 document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        // Only handle dropdown behavior on desktop screens
-        if (window.innerWidth > 968 && link.parentElement.classList.contains('has-dropdown')) {
-            e.preventDefault();
-            link.parentElement.classList.toggle('active');
-        }
-        // On mobile, let navigation work normally - no interference
-    });
+    // Only add dropdown behavior if the link has a dropdown AND we're on desktop
+    if (link.parentElement.classList.contains('has-dropdown')) {
+        link.addEventListener('click', function(e) {
+            // Only prevent default on desktop
+            if (window.innerWidth > 968) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('active');
+                console.log('Desktop dropdown toggled for:', this.textContent);
+            }
+            // On mobile (≤968px), do nothing - let the link navigate normally
+        });
+    }
+    // For links without dropdowns, don't add any event listeners at all
 });
 
 // Desktop dropdown close when clicking outside
