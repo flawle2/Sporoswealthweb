@@ -484,16 +484,17 @@ img {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 4px !important;
-    font-size: 36px !important; /* Match the font-size of regular stat-numbers */
-    height: 43px !important; /* Match the line-height of 36px text */
+    gap: 2px !important; /* Smaller gap between stars */
+    font-size: 18px !important; /* Much smaller container */
+    height: 36px !important; /* Smaller height to match text stats */
     margin-bottom: 5px !important;
+    padding: 8px 0 !important; /* Add padding to center vertically */
 }
 
 .stat-number.five-stars i {
     color: #F4E4C1 !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
-    font-size: 30px !important; /* Larger stars to match visual weight */
+    font-size: 16px !important; /* Much smaller, subtle stars */
 }
 
 /* Ensure all stat items have same structure */
