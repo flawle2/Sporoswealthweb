@@ -488,6 +488,37 @@
     
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // IMMEDIATE TEST - Show alert to confirm JS is working
+        alert('🔥 JAVASCRIPT IS WORKING!');
+        console.log('🔥 JAVASCRIPT CONSOLE LOG WORKING!');
+        
+        // Force show menu immediately
+        setTimeout(function() {
+            const menu = document.querySelector('.nav-menu');
+            console.log('Looking for nav-menu:', menu);
+            if (menu) {
+                menu.style.position = 'fixed';
+                menu.style.top = '0';
+                menu.style.right = '0';
+                menu.style.width = '300px';
+                menu.style.height = '100vh';
+                menu.style.backgroundColor = 'red';
+                menu.style.zIndex = '99999';
+                menu.style.border = '10px solid yellow';
+                console.log('🔴 RED MENU FORCED VISIBLE');
+            } else {
+                console.log('❌ NO NAV-MENU FOUND');
+                alert('❌ NO NAV-MENU FOUND');
+            }
+        }, 500);
+        
+        // GLOBAL CLICK HANDLER
+        window.simpleToggle = function() {
+            alert('🍔 BUTTON CLICKED!');
+            console.log('🍔 BUTTON CLICKED!');
+        };
+    </script>
     <script src="js/ultra-simple.js"></script>
 </body>
 </html>
