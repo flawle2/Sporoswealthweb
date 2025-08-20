@@ -1476,13 +1476,16 @@ section {
         z-index: 1000 !important;
         padding: 120px 40px 40px !important;
         overflow-y: auto !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
         border-left: 3px solid var(--primary-gold) !important;
     }
     
     .nav-menu.active {
         right: 0 !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
         border: 3px solid red !important; /* DEBUG: Red border to see menu */
     }
     

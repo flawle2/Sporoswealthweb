@@ -19,6 +19,35 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- MOBILE MENU DEBUG STYLES -->
+    <style>
+        @media (max-width: 968px) {
+            /* Force mobile menu to work */
+            .nav-menu {
+                position: fixed !important;
+                top: 0 !important;
+                right: -100% !important;
+                width: 85% !important;
+                height: 100vh !important;
+                background: white !important;
+                z-index: 9999 !important;
+                transition: right 0.3s ease !important;
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 100px 40px 40px !important;
+                border: 5px solid lime !important; /* SUPER VISIBLE DEBUG */
+            }
+            .nav-menu.active {
+                right: 0 !important;
+            }
+            .mobile-menu-toggle {
+                display: flex !important;
+                background: red !important;
+                padding: 10px !important;
+                z-index: 10000 !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Premium Navigation -->
@@ -96,7 +125,7 @@
                 </div>
             </div>
             
-            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <div class="mobile-menu-toggle" onclick="simpleToggle()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -459,7 +488,6 @@
     
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/main-simple.js"></script>
-    <script src="js/simple-mobile.js"></script>
+    <script src="js/ultra-simple.js"></script>
 </body>
 </html>
