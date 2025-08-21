@@ -663,12 +663,16 @@ img {
 }
 
 .star-badge {
-    background: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
     padding: 0 !important;
     border-radius: 0 !important;
+    border: none !important;
     box-shadow: none !important;
     display: inline-flex !important;
     gap: 3px !important;
+    outline: none !important;
 }
 
 .star-badge i {
