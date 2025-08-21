@@ -484,29 +484,42 @@ img {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 2px !important; /* Smaller gap between stars */
-    font-size: 18px !important; /* Much smaller container */
-    height: 36px !important; /* Smaller height to match text stats */
+    gap: 2px !important;
+    height: 43px !important; /* Same height as all stat-numbers */
     margin-bottom: 5px !important;
-    padding: 8px 0 !important; /* Add padding to center vertically */
+    background: none !important; /* Remove any background */
+    border: none !important; /* Remove any border */
+    box-shadow: none !important; /* Remove any shadow */
 }
 
 .stat-number.five-stars i {
     color: #F4E4C1 !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
-    font-size: 16px !important; /* Much smaller, subtle stars */
+    font-size: 20px !important; /* Simple, clean star size */
+    line-height: 1 !important;
 }
 
-/* Ensure all stat items have same structure */
+/* Ensure all stat items have same structure and baseline alignment */
 .stat-item {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    justify-content: flex-start !important;
 }
 
-/* Make all stat-labels align consistently */
+/* Make all stat-numbers the same baseline height */
+.stat-number {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 43px !important; /* Fixed height for alignment */
+    margin-bottom: 5px !important;
+}
+
+/* Make all stat-labels align consistently at same position */
 .stat-item .stat-label {
     margin-top: 0 !important;
+    position: relative !important;
+    top: 0 !important;
 }
 
 .stat-label {
@@ -650,17 +663,19 @@ img {
 }
 
 .star-badge {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    padding: 15px 20px;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: inline-flex !important;
+    gap: 3px !important;
 }
 
 .star-badge i {
-    color: white;
-    font-size: 16px;
-    margin: 0 2px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #F4E4C1 !important;
+    font-size: 20px !important;
+    margin: 0 !important;
+    text-shadow: none !important;
 }
 
 .award-text h3 {
